@@ -1,0 +1,68 @@
+body {
+    font: 1rem/1.3 "Roboto", sans-serif;
+    background: var(--bg_main);
+    color: var(--text_dark);
+    padding: 70px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+   
+  input {
+    appearance: none;
+  }
+   
+  input {
+    border: none;
+  }
+
+  .container form {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .container form input {
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+  }
+  
+  .container form input::placeholder {
+    color: currentColor; 
+  }
+  
+  .container form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--darkred);
+  }
+  
+  .container form button:hover {
+    background: var(--darkred);
+  }
+  
+  #weather-data {
+    text-align: center;
+    font-size: 2rem;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
