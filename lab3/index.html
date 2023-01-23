@@ -8,54 +8,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="keys">
-        <div data-key="65" class="key">
-          <kbd>A</kbd>
-          <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-          <kbd>S</kbd>
-          <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-          <kbd>D</kbd>
-          <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-          <kbd>F</kbd>
-          <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-          <kbd>G</kbd>
+     <div class="keys">
+        <div data-key="1" class="key">
+          <kbd>1</kbd>
           <span class="sound">boom</span>
         </div>
-        <div data-key="72" class="key">
-          <kbd>H</kbd>
+        <div data-key="2" class="key">
+          <kbd>2</kbd>
+          <span class="sound">clap</span>
+        </div>
+        <div data-key="3" class="key">
+          <kbd>3</kbd>
+          <span class="sound">hithat</span>
+        </div>
+        <div data-key="4" class="key">
+          <kbd>4</kbd>
+          <span class="sound">kick</span>
+        </div>
+        <div data-key="5" class="key">
+          <kbd>5</kbd>
+          <span class="sound">openhat</span>
+        </div>
+        <div data-key="6" class="key">
+          <kbd>6</kbd>
           <span class="sound">ride</span>
         </div>
-        <div data-key="74" class="key">
-          <kbd>J</kbd>
+        <div data-key="7" class="key">
+          <kbd>7</kbd>
           <span class="sound">snare</span>
         </div>
-        <div data-key="75" class="key">
-          <kbd>K</kbd>
+        <div data-key="8" class="key">
+          <kbd>8</kbd>
+          <span class="sound">thnk</span>
+        </div>
+        <div data-key="9" class="key">
+          <kbd>9</kbd>
           <span class="sound">tom</span>
         </div>
-        <div data-key="76" class="key">
-          <kbd>L</kbd>
-          <span class="sound">tink</span>
-        </div>
       </div>
-      <audio data-key="65" src="sounds/clap.wav"></audio>
-      <audio data-key="83" src="sounds/hihat.wav"></audio>
-      <audio data-key="68" src="sounds/kick.wav"></audio>
-      <audio data-key="70" src="sounds/openhat.wav"></audio>
-      <audio data-key="71" src="sounds/boom.wav"></audio>
-      <audio data-key="72" src="sounds/ride.wav"></audio>
-      <audio data-key="74" src="sounds/snare.wav"></audio>
-      <audio data-key="75" src="sounds/tom.wav"></audio>
-      <audio data-key="76" src="sounds/tink.wav"></audio>
-      
+        
+    
+      <audio id="channel1"></audio>
+        <button id="channel1-record-button" onclick="setRecording(1)">Nagraj</button> 
+        <button id="channel1-play-button" onclick ="playBack(1)">Odtwórz</button> </br></br>
+    <audio id="channel2"></audio>
+        <button id="channel2-record-button"onclick="setRecording(2)">Nagraj</button>
+        <button id="channel2-play-button"onclick ="playBack(2)">Odtwórz</button></br></br>
+    <audio id="channel3"></audio>
+    <button id="channel3-record-button"onclick="setRecording(3)">Nagraj</button>
+    <button id="channel3-play-button"onclick ="playBack(3)">Odtwórz</button></br></br>
+    <audio id="channel4"></audio>
+    <button id="channel4-record-button"onclick="setRecording(4)">Nagraj</button>
+    <button id="channel4-play-button"onclick ="playBack(4)">Odtwórz</button></br></br>
+<button id="all-play-button"onclick ="playAll()">Odtwórz wszystko</button>
+
 <script src="main.js"></script> 
 </body>
 </html>

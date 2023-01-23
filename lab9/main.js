@@ -68,3 +68,8 @@ function loadDataOnStartup() {
 window.onload = function () {
   loadDataOnStartup();
 };
+
+const input = document.querySelector('input').value;
+const main = document.querySelector('main');
+
+main.textContent = '';
