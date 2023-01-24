@@ -1,8 +1,9 @@
 const apiKey = "c4885943eadf9be6247d524937f10a59";
 
+let locationObject = Object.keys(JSON.parse(localStorage.getItem("location"))).map(function (key) {return this[key]}, JSON.parse(localStorage.getItem("location")))||[];
+
 function submitForm() {
   const location = document.getElementById("search").value;
-  let locationObject = JSON.parse(localStorage.getItem("location")) || {};
   for (let i = 9; i > 0; i--) {
     locationObject[i] = locationObject[i - 1];
   }
@@ -46,13 +47,17 @@ function fetchWeatherData(location) {
     });
 }
 
-function deleteCity(el){
-   var tbl = el.parentNode.parentNode.parentNode;
-   var row = el.parentNode.parentNode.rowIndex;
-
-     tbl.deleteRow(row - 1);
-
+function deleteCity(el) {
+  var tbl = el.parentNode.parentNode.parentNode;
+  var row = el.parentNode.parentNode.rowIndex;
+  tbl.deleteRow(row - 1);
+  const location = tbl.rows[row - 1].cells[0].textContent;
+  locationObject.splice(locationObject.indexOf(location), 1);
+  localStorage.setItem("location", JSON.stringify(locationObject));
 }
+
+
+
 
 function loadDataOnStartup() {
   const locationObject = JSON.parse(localStorage.getItem("location"));
@@ -68,8 +73,3 @@ function loadDataOnStartup() {
 window.onload = function () {
   loadDataOnStartup();
 };
-
-const input = document.querySelector('input').value;
-const main = document.querySelector('main');
-
-main.textContent = '';
